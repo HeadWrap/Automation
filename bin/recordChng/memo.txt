@@ -1,0 +1,15 @@
+ <2018.11.12.>
+ autoDiff.sh
+
+ #> ./autoDiff.sh [src_date] [dst_date]
+
+ if 다음과 같은 파일이 있다면 (by autoRecord_src/dst.sh)
+ diff_src_20181111.txt
+ diff_dst_20181112.txt
+
+ #> ./autoDiff.sh 20181111 20181112
+ -> 현재 작업 디렉터리에 diff_res_[today_date].txt
+
+ head -[num] diff_res_[today_date].txt | grep "<" | grep -iE "*python*3\.5*"
+
+  ~> 여기서 num은 vi 에디터로 파일을 열어서 hereinafter 를 검색하여 해당 줄 수를 알아내고, 그 줄 수를 입력하면 됨.
